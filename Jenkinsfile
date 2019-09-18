@@ -22,7 +22,7 @@ pipeline {
       }
       steps {
         unstash 'build-test-artifacts'
-        junit(testResults: '**/target/surefire-reports/TEST-*.xml', allowEmptyResults: true)
+        junit '**/target/surefire-reports/TEST-*.xml'
       }
     }
   }
